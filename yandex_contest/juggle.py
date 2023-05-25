@@ -1,15 +1,19 @@
-# Задача "Ловкость рук". ID решения в Я.Контесте 87636017
+# Задача "Ловкость рук". ID решения в Я.Контесте 87652101
 
 from collections import Counter
+from typing import List
 
-k = int(input())
-keyboard = []
-for i in range(4):
-    keyboard.extend(i for i in list(input()) if i.isdigit())
 
-result = 0
-for i in Counter(keyboard).values():
-    if k*2 >= i:
-        result += 1
+def count_points(k: int, keyboard: List[int]) -> int:
+    """Counts the number of possible points in the game."""
+    result = 0
+    for i in Counter(keyboard).values():
+        if k*2 >= i:
+            result += 1
+    return result
 
-print(result)
+
+if __name__ == '__main__':
+    k = int(input())
+    keyboard = [i for _ in range(4) for i in list(input()) if i.isdigit()]
+    print(count_points(k, keyboard))
