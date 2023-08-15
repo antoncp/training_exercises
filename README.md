@@ -1,2 +1,2 @@
 # training_exercises
-Solutions for small tasks from Codewars, LeetCode and etc. 
+Solutions for small tasks from Codewars, LeetCode, Yandex.Contest and etc. 
