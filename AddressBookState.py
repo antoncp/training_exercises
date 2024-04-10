@@ -16,7 +16,6 @@ def by_state(st):
     locations = st.split("\n")
     for loc in locations:
         state = loc[-2:]
-        print(state)
         address = loc[:-3]
         if sorted_locations.get(states[state]):
             sorted_locations[states[state]] += [address]
